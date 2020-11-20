@@ -93,7 +93,7 @@ const getTranslatedText = function (lang) {
 const app = Vue.createApp({
     data() {
         return {
-            lang: 'en',
+            lang: 'es',
             data: {}
         }
     },
