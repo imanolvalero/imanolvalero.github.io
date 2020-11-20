@@ -1,5 +1,6 @@
 body {
 	font-family: 'Courier New', Courier, monospace;
+	background-color: rgb(240, 240, 240);
 }
 
 li {
@@ -11,6 +12,6 @@ select {
 	appearance: none;
 	border: 1px solid;
 	font-family: 'Courier New', Courier, monospace;
-	font-size: medium;
+	font-size: large;
     background-color: white;
 }
