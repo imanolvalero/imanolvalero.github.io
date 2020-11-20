@@ -5,3 +5,12 @@ body {
 li {
 	list-style: none;
 }
+
+select {
+	float: right;
+	appearance: none;
+	border: 1px solid;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: medium;
+    background-color: white;
+}

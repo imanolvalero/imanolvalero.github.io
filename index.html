@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <title></title>
@@ -8,6 +8,12 @@
 </head>
 <body>
     <div id="app">
+        <select class="lang_selector"
+           @change="translate($event)"
+           v-model="lang">
+           <option>es</option>
+           <option>en</option>
+       </select>
        <h2>{{ data.hi }}</h2>
         <div>{{ data.desc }}</div>
         <section-list v-if="data.sections.length" :sections="data.sections"></review-list>
