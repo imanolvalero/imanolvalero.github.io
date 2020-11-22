@@ -7,11 +7,16 @@ li {
 	list-style: none;
 }
 
-select {
+.toolbar-elem {
 	float: right;
-	appearance: none;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 1em;
 	border: 1px solid;
 	font-family: 'Courier New', Courier, monospace;
-	font-size: large;
-    background-color: white;
+	font-size: x-large;
+	background-color: white;
+	padding: 0.2em;
+	text-align: center;
+	cursor: pointer;
 }

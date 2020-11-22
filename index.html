@@ -1,27 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8" />
     <title></title>
     <link rel="stylesheet" href="assets/style.css" />
-    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+    <script src="assets/vue.js"></script>
 </head>
 <body>
     <div id="app">
-        <select
-           @change="translate($event)"
-           v-model="lang">
-           <option>es</option>
-           <option>en</option>
-       </select>
+       <language-selector
+            :langs="langs"
+            :default="lang"
+            @changed="translate"
+       ></language-selector>
+       <div class="toolbar-elem" @click="call">&#128241;</div>
+       <div class="toolbar-elem" @click="email">&#128231;</div>
+       <div class="toolbar-elem" @click="map">&#128205;</div>
        <h2>{{ data.hi }}</h2>
         <div>{{ data.desc }}</div>
         <section-list v-if="data.sections.length" :sections="data.sections"></review-list>
     </div>
 
     <script src="main.js"></script>
+    <script src="assets/data.js"></script>
     <script src="components/SectionList.js"></script>
     <script src="components/SectionView.js"></script>
+    <script src="components/LanguageSelector.js"></script>
     <script>
         const mountedApp = app.mount('#app')
     </script>
