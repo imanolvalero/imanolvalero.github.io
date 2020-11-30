@@ -8,24 +8,22 @@
 </head>
 <body>
     <div id="app">
-       <language-selector
+       <toolbar
             :langs="langs"
-            :default="lang"
+            :buttons=buttons
+            :data=data
+            :contact=contact
             @changed="translate"
-       ></language-selector>
-       <div class="toolbar-elem" @click="call">&#128241;</div>
-       <div class="toolbar-elem" @click="email">&#128231;</div>
-       <div class="toolbar-elem" @click="map">&#128205;</div>
+       ></toolbar>
        <h2>{{ data.hi }}</h2>
         <div>{{ data.desc }}</div>
         <section-list v-if="data.sections.length" :sections="data.sections"></review-list>
     </div>
 
     <script src="main.js"></script>
-    <script src="assets/data.js"></script>
     <script src="components/SectionList.js"></script>
     <script src="components/SectionView.js"></script>
-    <script src="components/LanguageSelector.js"></script>
+    <script src="components/Toolbar.js"></script>
     <script>
         const mountedApp = app.mount('#app')
     </script>
